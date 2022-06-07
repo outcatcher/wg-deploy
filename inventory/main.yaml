@@ -23,7 +23,7 @@ all:
           publickey: "1VdBfIeXtJ8T6h4OY0218Ot3EWliL3692uBTfJ00nWQ="
         - name: alexandra-phone
           allowed_ip: "10.0.1.6"
-          publickey: "O+MzDNLmOdsQRCDUku0QzU24TWan7QBSpMkhm78Qkg0="
+          publickey: "plEZDgnPD8mkDWqx8g7QH3tCwciv7GK3HmHhn2yKiSQ="
       wireguard_keepalive: 25
       wireguard_out_interface: eth0
       wireguard_additional_routes: []
