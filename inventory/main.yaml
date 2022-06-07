@@ -3,7 +3,6 @@ all:
     target:
       ansible_host: "ssh.outcatcher.ru"
       ansible_user: "ubuntu"
-      ansible_ssh_pipelining: yes
 
       wireguard_hostname: "ssh.outcatcher.ru"
       wireguard_address: 10.0.1.0/24
