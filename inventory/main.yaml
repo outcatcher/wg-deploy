@@ -1,0 +1,33 @@
+all:
+  hosts:
+    target:
+      ansible_host: "ssh.outcatcher.ru"
+      ansible_user: "ubuntu"
+      ansible_ssh_pipelining: yes
+
+      wireguard_hostname: "ssh.outcatcher.ru"
+      wireguard_address: 10.0.1.0/24
+      wireguard_port: 19769
+      wireguard_peers:
+        - name: linux-desktop
+          allowed_ip: "10.0.1.2"
+          publickey: "/XtL8+V7FwYge7s6sCVZ0wK8c73FdgP8q52/BI1Ac1A="
+        - name: ksyusg-phone
+          allowed_ip: "10.0.1.3"
+          publickey: "RqLpKfCmU9jmiETAw6SJout2nvX2V4ASZNMY1oflYAY="
+        - name: akachurin-iphone
+          allowed_ip: "10.0.1.4"
+          publickey: "fHOjUJS9/uGuf5F4P+WtLebeMSPVCi1RRl5EQ5bD5Tc="
+        - name: svetlana-phone
+          allowed_ip: "10.0.1.5"
+          publickey: "1VdBfIeXtJ8T6h4OY0218Ot3EWliL3692uBTfJ00nWQ="
+        - name: alexandra-phone
+          allowed_ip: "10.0.1.6"
+          publickey: "O+MzDNLmOdsQRCDUku0QzU24TWan7QBSpMkhm78Qkg0="
+      wireguard_keepalive: 25
+      wireguard_out_interface: eth0
+      wireguard_additional_routes: []
+      wireguard_peers_allowed_ips: "0.0.0.0/0"
+      wireguard_download_clients: yes
+      wireguard_clients_download_dir: "{{ playbook_dir }}/clients/"
+

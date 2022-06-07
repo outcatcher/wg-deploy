@@ -1,0 +1,4 @@
+---
+- name: Install and configure Wireguard
+  import_playbook: lablabs.wireguard.wireguard
+  tags: wireguard
