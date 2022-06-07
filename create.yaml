@@ -1,4 +1,16 @@
 ---
+- hosts: localhost
+  vars_prompt:
+    - name: hostname
+      prompt: "Target host"
+      private: no
+  tasks:
+    - add_host:
+        hostname: "{{ hostname }}"
+        wireguard_hostname: "{{ hostname }}"
+        ansible_user: "ubuntu"
+        groups: target
+
 - name: Install and configure Wireguard
   import_playbook: lablabs.wireguard.wireguard
   tags: wireguard
